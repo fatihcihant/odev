@@ -5,7 +5,8 @@ Created on Sun Apr  5 13:04:22 2020
 @author: fatih cihan
 """
 import operator
-f=open("C:/input_hw_2.csv","r")
+import sys
+f=open(sys.argv[1] + "/input_hw_2.csv","r")
 allChar=f.read()
 wordList=allChar.split("\n")
 monthFreq={}
@@ -35,7 +36,7 @@ for i in sortedMonthFreq:
     psum+=i[1]
 avr=psum/size2
 
-fr=open("180401012_hw_2_output.txt","w")
+fr=open(sys.argv[2] + "/180401012_hw_2_output.txt","w")
 fr.write("Medyan: " + str(median) +"\n")
 fr.write("Ortalama: " + str(avr) + "\n")
 fr.close
